@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.send("welcome to bfree feedback app, BEA");
 });
 app.use("/api/v1/test", user);
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`server up and running on port ${port}`);
