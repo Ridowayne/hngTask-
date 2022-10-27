@@ -1,7 +1,7 @@
 exports.myInfo = async (req, res) => {
   try {
     const userInfo = {
-      slasckUserName: 'hassanrilwan12',
+      slasckUsername: 'hassanrilwan12',
       backend: true,
       age: 25,
       bio: 'Well I cook anything i am told to cook, agba beans cooker',
