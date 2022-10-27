@@ -1,18 +1,18 @@
-const express = require("express");
+const express = require('express');
 
-const cors = require("cors");
-const dotenv = require("dotenv");
-const user = require("./routes/myRoutes");
-dotenv.config({ path: "./config.env" });
+const cors = require('cors');
+const dotenv = require('dotenv');
+const user = require('./routes/myRoutes');
+dotenv.config({ path: './config.env' });
 
 const app = express();
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("welcome HOME page of my first hng task");
+app.get('/', (req, res) => {
+  res.send('welcome HOME page of my first hng task');
 });
-app.use("/api/v1/test", user);
+app.use('/api/v1/test', user);
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
