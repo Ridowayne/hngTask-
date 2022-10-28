@@ -1,7 +1,7 @@
 exports.myInfo = async (req, res) => {
   try {
     const userInfo = {
-      slasckUsername: 'ridowayne1',
+      slackUsername: 'ridowayne1',
       backend: true,
       age: 25,
       bio: 'Well I cook anything i am told to cook, agba beans cooker',
