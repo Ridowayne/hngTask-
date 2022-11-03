@@ -2,12 +2,14 @@ const express = require('express');
 
 const cors = require('cors');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
 const user = require('./routes/myRoutes');
 dotenv.config({ path: './config.env' });
 
 const app = express();
 app.use(cors({ origin: '*' }));
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
   res.send('welcome HOME page of my first hng task');
