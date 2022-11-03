@@ -25,6 +25,7 @@ exports.calculate = async (req, res) => {
       result = x + y;
       return res.status(201).json({
         // status: 'success',
+        slackUsername: slackUsername,
         result: result,
         operation_type: operation,
       });
@@ -33,6 +34,7 @@ exports.calculate = async (req, res) => {
       result = x - y;
       return res.status(201).json({
         // status: 'success',
+        slackUsername: slackUsername,
         result: result,
         operation_type: operation,
       });
@@ -41,7 +43,7 @@ exports.calculate = async (req, res) => {
       result = x * y;
       return res.status(201).json({
         // status: 'success',
-        // slackUsername: slackUsername,
+        slackUsername: slackUsername,
         result: result,
         operation_type: operation,
       });
