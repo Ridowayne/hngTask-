@@ -23,7 +23,7 @@ exports.calculate = async (req, res) => {
     if (operationType === 'addition') {
       operation = 'addition';
       result = x + y;
-      return res.status(201).json({
+      return res.status(200).json({
         // status: 'success',
         slackUsername: slackUsername,
         result: result,
@@ -32,7 +32,7 @@ exports.calculate = async (req, res) => {
     } else if (operationType === 'subtraction') {
       operation = 'subtraction';
       result = x - y;
-      return res.status(201).json({
+      return res.status(200).json({
         // status: 'success',
         slackUsername: slackUsername,
         result: result,
@@ -41,7 +41,7 @@ exports.calculate = async (req, res) => {
     } else if (operationType === 'multiplication') {
       operation = 'multiplication';
       result = x * y;
-      return res.status(201).json({
+      return res.status(200).json({
         // status: 'success',
         slackUsername: slackUsername,
         result: result,
